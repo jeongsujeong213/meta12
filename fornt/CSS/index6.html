@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /* flex-direction: row; */
+        gap: 20px;
+      }
+      .sidebar {
+        background-color: #f0f0f0;
+        /* 고정 가로 너비 200px */
+        flex: 0 0 200px;
+      }
+      .main {
+        background-color: lightblue;
+        /* flex: 1 1 0을 의미함. 남은 공간을 모두 차지함. */
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>flexbox 기본 예제</h3>
+    <div class="container">
+      <div class="sidebar">사이드바</div>
+      <div class="main">메인 컨텐츠</div>
+      <div class="sidebar">사이드바</div>
+    </div>
+  </body>
+</html>
