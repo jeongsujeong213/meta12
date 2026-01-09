@@ -7,8 +7,8 @@
     <style>
       * {
         box-sizing: border-box;
-        margin: 10;
-        padding: 10;
+        margin: 0;
+        padding: 0;
       }
       body {
         height: 100vh; /* veiwport height 화면높이 */
@@ -17,70 +17,72 @@
 
       /* 전체 대시보드 */
       .dashboard {
-        padding: 10px;
-        width: 600px;
-        height: 400px;
-        background-color: pink color;
+        display: flex;
+        height: 100%; /* 부모가 100vh(화면높이 전체)를 차지함으로써 그 공간을 100% 사용하겠다는 의미 */
       }
 
       /* 왼쪽 네비게이션 */
       .nav {
-        display: flex;
+        /* flex: 0 0 200px; */
+        width: 220px;
+        background-color: #1e272e;
+        color: #fff;
+        padding: 20px;
       }
 
       /* 오른쪽 전체 영역 */
       .right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
       }
 
       /* 상단바 */
       .topbar {
-        width: 1150px;
-        height: 50px;
-        background-color: rgb(62, 104, 182);
-        position: absolute;
-        top: 0px;
-        left: 0px;
+        background-color: #485460;
+        height: 60px;
+        padding: 20px;
+        color: #fff;
       }
 
       /* 콘텐츠 영역 */
       .content {
+        display: flex;
+        background-color: #d2dae2;
+        flex: 1;
+        gap: 15px;
+        padding: 20px;
       }
 
       /* 메인 콘텐츠 */
       .main-content {
-        display: flex;
-        padding: 10px;
-        width: 900px;
-        height: 550px;
-        background-color: rgb(255, 255, 255);
+        background-color: #fff;
+        flex: 3;
+        padding: 20px;
       }
 
       /* 서브 패널 */
       .side-panel {
-        display: flex;
-        padding: 10px;
-        width: 300px;
-        height: 550px;
-        background-color: orange;
-        position: absolute;
-        left: 900px;
-        top: 50px;
+        background-color: #ffa801;
+        flex: 1;
+        padding: 20px;
       }
 
       /* 하단 정보바 */
       .status {
+        background-color: #808e9b;
+        height: 40px;
+        color: #fff;
+        /* 아래 3줄은 텍스트를 가운데로 배치시키는 공식!!! */
         display: flex;
-        padding: 10px;
-        width: 1000px;
-        height: 50px;
-        background-color: rgb(126, 131, 194);
-        left: 0px;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
     <div class="dashboard">
-      <aside class="nav">왼쪽 네비게이션</aside>
+      <div class="nav">왼쪽 네비게이션</div>
 
       <div class="right">
         <header class="topbar">상단바 (검색 / 사용자 정보)</header>
