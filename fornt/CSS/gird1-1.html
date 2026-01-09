@@ -4,14 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .account-book {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* ↑ 4개의 컬럼(열)을 동일한 비율(1fr)로 생성 */
+        max-width: 600px;
+        border-top: 1px solid gray;
+        border-left: 1px solid gray;
+      }
+      .cell {
+        border-right: 1px solid gray;
+        border-bottom: 1pt solid gray;
+        padding: 10px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header {
+        background-color: #00aaff;
+        color: #fff;
+        font-weight: bold;
+        border-bottom: 2px solid black;
+      }
+      .number {
+        /* 오른쪽 정렬 : grid는 주축이 항상 가로방향으로 고정. justify는 가로 정렬 */
+        justify-content: flex-end;
+      }
+      .footer {
+        background-color: #ffe082;
+        font-weight: bold;
+      }
+      .merge-2 {
+        grid-column: span 2;
+        /* grid-row: span 2;는 행으로 두 칸을 가짐 */
+      }
+      h2 {
+        text-align: center;
+        width: 600px;
+      }
+    </style>
   </head>
   <body>
     <h2>나의 가계부</h2>
     <div class="account-book">
-      <div class="cell">날짜</div>
-      <div class="cell">항목</div>
-      <div class="cell">수입</div>
-      <div class="cell">지출</div>
+      <div class="cell header">날짜</div>
+      <div class="cell header">항목</div>
+      <div class="cell header">수입</div>
+      <div class="cell header">지출</div>
 
       <div class="cell">12월 01일</div>
       <div class="cell">월급</div>
@@ -19,7 +60,7 @@
       <div class="cell"></div>
 
       <div class="cell">12월 03일</div>
-      <div class="cell">식비div>
+      <div class="cell">식비</div>
       <div class="cell number"></div>
       <div class="cell number">50,000</div>
 
@@ -38,13 +79,12 @@
       <div class="cell number"></div>
       <div class="cell number">80,000</div>
 
-      <div class="cell footer">합계</div>
-      <div class="cell footer"></div>
+      <div class="cell footer merge-2">합계</div>
       <div class="cell footer number">3,200,000</div>
       <div class="cell footer number">160,000</div>
 
       <div class="cell footer merge-2">잔액</div>
-      <div class="cell footer merge-2">3,040,000</div>
+      <div class="cell footer merge-2 number">3,040,000</div>
     </div>
   </body>
 </html>
