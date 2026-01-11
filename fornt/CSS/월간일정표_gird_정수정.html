@@ -2,11 +2,9 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Fixed Width Flexbox Calendar</title>
+<title>Grid Calendar</title>
 <style>
-*,
-*::before,
-*::after {
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,30 +17,23 @@ h1 {
     padding: 15px;
 }
 
-.calendar {
-    width: 700px;       /* 고정 너비 */
-    min-width: 700px;   /* 최소 너비 */
+.calendar-grid {
+    width: 90%;
     margin: 20px auto;
-    overflow-x: auto;   /* 창이 작을 때 가로 스크롤 생김 */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }
 
-.row {
-    display: flex;
-    flex-wrap: nowrap;  /* 한 줄에 7개 고정, 줄 바꿈 없음 */
-}
-
-.row > div {
-    width: 100px;       /* 셀 고정 너비 */
-    height: 100px;
+.calendar-grid > div {
     border: 1px solid #999;
+    height: 100px;
     padding: 5px;
-    text-align: center;
-    box-sizing: border-box;
 }
 
-.header > div {
+.day {
     background: #e8f2fb;
     font-weight: bold;
+    text-align: center;
 }
 
 .weekend {
