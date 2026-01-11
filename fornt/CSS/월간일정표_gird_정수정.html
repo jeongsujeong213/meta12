@@ -1,76 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      .week {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      }
-    </style>
-  </head>
-  <body>
-    <h1>2026년 1월</h1>
-    <div class="week">
-      <div class="cell header">일</div>
-      <div class="cell header">월</div>
-      <div class="cell header">화</div>
-      <div class="cell header">수</div>
-      <div class="cell header">목</div>
-      <div class="cell header">금</div>
-      <div class="cell header">토</div>
-    </div>
-    <div>
-      <div class="cell"></div>
-      <div class="cell"></div>
-      <div class="cell"></div>
-      <div class="cell"></div>
-      <div class="cell">1 신년휴일</div>
-      <div class="cell">2 휴강</div>
-      <div class="cell sat">3</div>
-    </div>
-    <div>
-      <div class="cell sun">4</div>
-      <div class="cell">5 HTML</div>
-      <div class="cell">6 HTML</div>
-      <div class="cell">7 CSS</div>
-      <div class="cell">8 CSS</div>
-      <div class="cell">9 CSS</div>
-      <div class="cell sat">10</div>
-    </div>
-    <div>
-      <div class="cell sun">11</div>
-      <div class="cell">12 CSS</div>
-      <div class="cell">13 개인 웹페이지 설계</div>
-      <div class="cell">14 Javascript</div>
-      <div class="cell">15 Javascript</div>
-      <div class="cell">16 Javascript</div>
-      <div class="cell sat">17</div>
-    </div>
-    <div>
-      <div class="cell sun">18</div>
-      <div class="cell">19 Javascript</div>
-      <div class="cell">20 Javascript</div>
-      <div class="cell">21 개인 웹페이지 만들기</div>
-      <div class="cell">22 개인 웹페이지 만들기</div>
-      <div class="cell">23 개인 웹페이지 만들기</div>
-      <div class="cell sat">24</div>
-    </div>
-    <div>
-      <div class="cell">25</div>
-      <div class="cell">26 과정 마무리 테스트</div>
-      <div class="cell">27</div>
-      <div class="cell">28</div>
-      <div class="cell">29</div>
-      <div class="cell">30</div>
-      <div class="cell non"></div>
-    </div>
-  </body>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Grid Calendar</title>
+
+<style>
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background: #0b6fb8;
+    color: white;
+    padding: 15px;
+}
+
+.calendar-grid {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-grid > div {
+    border: 1px solid #999;
+    height: 100px;
+    padding: 5px;
+}
+
+.day {
+    background: #e8f2fb;
+    font-weight: bold;
+    text-align: center;
+}
+
+.weekend {
+    background: #f8c9a0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>2026년 1월 (Grid)</h1>
+
+<div class="calendar-grid">
+  <div class="day">일</div><div class="day">월</div><div class="day">화</div>
+  <div class="day">수</div><div class="day">목</div><div class="day">금</div>
+  <div class="day">토</div>
+
+  <div></div><div></div><div></div><div></div>
+  <div>1<br>신년휴일</div>
+  <div>2<br>휴강</div>
+  <div class="weekend">3</div>
+
+  <div class="weekend">4</div>
+  <div>5<br>HTML</div>
+  <div>6<br>HTML</div>
+  <div>7<br>CSS</div>
+  <div>8<br>CSS</div>
+  <div>9<br>CSS</div>
+  <div class="weekend">10</div>
+</div>
+
+</body>
 </html>
