@@ -79,3 +79,23 @@ body {
     border-radius: 20px;
     margin: 0 4px;
 }
+
+.btn-contact {
+    display: inline-block;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    background-color: #333;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    /* 애니메이션의 슬로우 효과 */
+    /* 즉시 변화하지 않고 주어진 시간동안 서서히 변하도록 설정 */
+    transition: all 0.3s;
+    /* 또는 transition: background-color 0.3s; */
+}
+
+.btn-contact:hover {
+    /* ↑ 버튼에 커서를 갖다대면 컬러가 바뀌는 기능 */
+    background-color: #111; /* 이 외에도  color 또는 font-size 등 변경 가능 */
+}
