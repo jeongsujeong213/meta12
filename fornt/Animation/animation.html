@@ -70,10 +70,10 @@
     }
 
     .timing {
-      position: relative;
+      position: relative; /* 부모가 앱솔트와 같은 절대값을 가져야 함 */
       animation-name: race;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
+      animation-duration: 4s;
+      animation-iteration-count: 1;
       animation-play-state: paused;
       /* animation-direction: alternate; */
     }
@@ -113,7 +113,7 @@
       }
 
       to {
-        left: 500px;
+        left: 700px;
       }
     }
   </style>
