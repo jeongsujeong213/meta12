@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+}
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #333;
+}
+li {
+    list-style: none; /* 리스트의 항목 기본 표시 요소 제거 */
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+   padding: 10px 24px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   position: sticky;
+   top: 0;
+   z-index: 100;   /* 100에 특별한 의미는 없음. 상대적으로 큰 값을 부여하는 것이 일반적이기 때문에 부여함. */
+}
