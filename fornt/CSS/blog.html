@@ -8,8 +8,6 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
     body {
       display: flex;
@@ -23,24 +21,24 @@
       max-width: 720px;
       background-color: #ffffff;
       padding: 40px;
-      border-radius: 10px;
+      gap: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .post-header {
     }
-    .categoty {
+    .category {
       background-color: #3498db;
       color: white;
       padding: 10px 20px;
+      border-radius: 20px;
     }
-    h1 {
+    .blockq {
+      background-color: #ffffffb9;
     }
-    .meta {
-    }
-    .author {
-    }
-    .date {
-    }
-    .read {
+    .tag {
+      background-color: #d6d6d6;
+      padding: 10px 20px;
+      border-radius: 10px;
     }
   </style>
   <body>
@@ -53,6 +51,9 @@
           <span class="date">2024년 1월 15일</span>
           <span class="read-time">5분 소요</span>
         </div>
+        <br />
+        <hr />
+        <br />
       </header>
 
       <div class="post-content">
@@ -100,12 +101,15 @@
           다양한 레이아웃을 자유자재로 구현할 수 있게 될 것입니다.
         </p>
       </div>
-
+      <br />
+      <hr />
+      <br />
       <footer class="post-footer">
         <div class="tags">
           <span class="tag">CSS</span>
           <span class="tag">웹개발</span>
           <span class="tag">레이아웃</span>
+          <br />
         </div>
         <div class="share">
           <span>공유하기:</span>
