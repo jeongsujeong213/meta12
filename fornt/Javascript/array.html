@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 배열을 사용하지 않을 경우, 4개의 변수와 화면 출력을 위해 4개의 console.log 명령이 필요함.
+      let spring = "봄";
+      let summer = "여름";
+      let fall = "가을";
+      let winter = "겨울";
+      console.log(spring);
+      console.log(summer);
+      console.log(fall);
+      console.log(winter);
+
+      //  <참고> 인용부호("",'')를 이용하여 만들어지 문자열은 유사배열로 취급함.
+      // 예)  winter는 ["겨", "울"]과 같은 형태로 인식되며 마치 배열처럼 문자 하나하나를 따로 취급할 수 있음.
+      // 그러나 숫자는 유사배열이 아님!!!
+
+      let number = 10000; // <- 숫자로 인식
+      console.log(number[0]); // 인용부호를 통해 생성된 것만 문자로 인식함으로써 undefind가 출력됨.
+
+      let number2 = "10000"; // <- 유사배열(문자)로 인식
+      console.log(number2[0]); // 검사창에 "1"이 출력됨.
+
+      //   ↓↓↓ 배열 사용의 예
+      //   1개의 변수와 한 번의 console.log 사용
+      //   index(예: [0])를 이용하면 개별 아이템을 가져올 수 있음.
+      let season = ["봄", "여름", "가을", "겨울"];
+      console.log(season);
+      console.log(season[0]); // 봄
+      console.log(season[3]); // 겨울
+    </script>
+  </body>
+</html>

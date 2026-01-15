@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 산술연산자: + - * / % ++ --
+      let a = 1 + 2; // 3
+      let b = 100 - 99; // 1
+      let c = 5 * 3; // 15
+      let d = 4 / 2; // 2
+      let e = 10 % 3; //1
+      console.log(a + b); // 4
+      console.log(c % d); // 1
+      a++; // <- 단독으로 씀. a = a + 1 과 같은 의미.
+      console.log(a); // 4
+      b--; // <- 단독으로 씀. b = b - 1 과 같은 의미.
+      console.log(b); // 0
+
+      // 비교연산자
+      console.log(3 == 3); // true
+      console.log(3 == "3"); // true 숫자 3과 문자 3의 비교로 인해 타입 자동 변환되어서 맞다고 뜸.
+      console.log(3 === "3"); // false 자료형까지 엄격하게 비교.
+      console.log(3 != "3"); // false 타입 자동 변환.
+      console.log(3 !== "3"); // true 자료형까지 엄격하게 비교.
+      console.log(3 < 4); // true
+      console.log(3 <= 4); // true
+      console.log(3 > 4); // false
+      console.log(3 >= 4); // false
+    </script>
+  </body>
+</html>
