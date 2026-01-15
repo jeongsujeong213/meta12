@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if 단독 사용
+      let userName;
+      if (userName != undefined) {
+        console.log(userName);
+      }
+      console.log("시작..."); // <- 이 if문은 조건이 참이면 실행하고 거짓이면 실행 X
+      console.log("-------------------");
+
+      // if ~ els
+      if (userName != undefined) {
+        console.log(userName);
+      } else {
+        console.log("이름이 없습니다."); // if ~ else는 두 조건이 동시에 실행될 수 없음. 무조건 둘 중 하나.
+      }
+      console.log("시작...");
+      console.log("-------------------");
+
+      // 연습
+      // parseInt() <- 형변환함수: 다른 자료형을 정수형으로 변환해 주는 함수.
+      let userNumber = parseInt(prompt("숫자를 입력하세요.")); // prompt는 유저가 창에 입력을 완료해야만 다음 식으로 넘어감.
+      //   if (userNumber % 2 == 0) {
+      //     document.write("짝수입니다.");
+      //     console.log("짝수입니다.");
+      //   } else {
+      //     document.write("홀수입니다.");
+      //     console.log("홀수입니다.");
+      //   }
+
+      // 수정본
+      // NaN: Not a Number(숫자가 아니란 뜻)
+      if (Number.isNaN(userNumber)) {
+        // isNaN <- 숫자가 아니냐고 묻는 식
+        console.log(userNumber); // <- 이렇게 하면 NaN이 나올 것
+        document.write("숫자만 입력하시오.");
+      } else if (userNumber % 2 == 0) {
+        document.write("짝수입니다.");
+        console.log("짝수입니다.");
+      } else {
+        document.write("홀수입니다.");
+        console.log("홀수입니다.");
+      }
+    </script>
+  </body>
+</html>
