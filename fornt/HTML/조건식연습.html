@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1번
+      let password = "pass";
+      if (password.length < 8) {
+        console.log("비밀번호는 최소 8자 이상이어야 합니다.");
+      } else {
+        console.log("안전한 비밀번호입니다. 저장합니다.");
+      }
+
+      // 2번
+      let userRole = "guest"; // 현재 접속자 권한
+      if (userRole !== "admin") {
+        console.log("관리자만 접근할 수 있습니다. 메인으로 이동합니다.");
+      } else {
+        console.log("관리자 페이지에 접속했습니다.");
+      }
+
+      // 3번
+      let fileSize = 7500; // 단위: KB (7.5MB)
+      let limit = 5000; // 제한: 5000KB (5MB)
+
+      if (fileSize > limit) {
+        console.log("파일이 너무 큽니다. 5MB 이하만 가능합니다.");
+      } else {
+        console.log("파일 업로드를 시작합니다...");
+      }
+
+      // 4번
+      let number = 7;
+      if (number % 2 === 0) {
+        console.log(number + "은(는) 짝수입니다.");
+      } else {
+        console.log(number + "은(는) 홀수입니다.");
+      }
+
+      //5번
+      let isDarkMode = true; // 현재 상태: 켜짐
+      if (isDarkMode === true) {
+        isDarkMode = false;
+        console.log("라이트 모드로 전환되었습니다.");
+      } else {
+        isDarkMode = true;
+        console.log("다크 모드로 전환되었습니다.");
+      }
+
+      //6번
+      let networkSpeed = 15; // 현재 속도 (Mbps)
+
+      if (networkSpeed >= 50) {
+        console.log("화질 설정: 4K (초고화질)");
+      } else if (networkSpeed >= 20) {
+        console.log("화질 설정: 1080p (고화질)");
+      } else {
+        console.log("화질 설정: 480p (데이터 절약)");
+      }
+
+      //7번
+      let damage = 100;
+      let criRate = 20; // 20% 확률
+      let randomVal = Math.floor(Math.random() * 100) + 1; // 1~100 랜덤 숫자
+      // 로직: 랜덤 숫자가 20 이하가 나올 확률은 20%임.
+
+      if (randomVal <= criRate) {
+        damage = damage * 2;
+        console.log("크리티컬 히트! 데미지: " + damage);
+      } else {
+        console.log("일반 공격. 데미지: " + damage);
+      }
+
+      //8번
+      let inputCood = "WELCOME2026";
+      let price = 20000;
+
+      if() {
+        price = price * 0.9; // 10% 할인
+        console.log("쿠폰 적용 완료! 할인된 가격:" + price + "원");
+      }
+    </script>
+  </body>
+</html>
