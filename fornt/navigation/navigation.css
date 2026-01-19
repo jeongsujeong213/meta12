@@ -111,7 +111,7 @@ li {
 
 /* [반응형 - 모바일 (768px 이하)] */
 /* 미디어쿼리는 반드시 css의 제일 아래 부분에 작성해야 함. */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) 
   .navbar {
     flex-direction: column;
     align-items: flex-start; /* 왼쪽 정렬 */
@@ -119,6 +119,7 @@ li {
   }
 
   .navbar-menu {
+    display: none; /* 모바일 사이즈에서 평소에는 안 보임. 햄버거버튼 클릭하면 보여야 함. */
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
@@ -126,7 +127,9 @@ li {
   }
 
   /* JS로 active 클래스가 붙으면 보이기 */
+  /* JS에서 햄버거 버튼을 클릭하면 .active가 생겼다가 사라졌다 함.(=토글) */
   .navbar-menu.active {
+    display: flex;
   }
 
   .navbar-menu li {
