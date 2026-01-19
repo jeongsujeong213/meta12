@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 배열하는 법
+      // 배열(array)은 자바스크립트의 내장 객체 중 가장 많이 쓰이는 자료형
+      // 여러개의 데이터를 함께 제어하기 위한 사용함.
+
+      // 정의하는 법:
+      let arr1 = new Array(); // 빈 배열
+      let arr2 = new Array(4); // 크기를 지정할 수 있음.
+      let arr3 = ["one", "two", "three", "four"]; // 가장 많이 쓰이는 정의법
+      let arr4 = Array("one", "two", "three", "four");
+
+      // 실제 많이 쓰이는 예시
+      // new Array()문법 대신 아래와 같이 갈견하게 빈 배열을 만들고 필요한 데이터를 인덱스별로 하나씩 입력하는 방식으로 배열을 생성함.
+      let numbers = [];
+      for (let i = 0; i < 5; i++) {
+        numbers[i] = i * 10;
+      }
+      console.log(numbers);
+      console.log(numbers.length); // 배일의 길이. 5
+
+      // 2. 배열 객체의 다양한 메서드 (교과서 p.594)
+      // 1) comcat(): 배열 2개를 합쳐서 새로운 배열을 만듦.
+      let nums = [1, 2, 3];
+      let chars = ["a", "b", "c", "d"];
+      let numChars = nums.concat(chars);
+      console.log(numChars);
+
+      // 2) join(): 각 요소를 연결해서 하나의 문자열로 만듦. (중간에 구분자를 넣을 수 있음)
+      let string1 = nums.join(", ");
+      console.log(string1); // 1,2,3 (쉼표가 구분자로 추가됨)
+      let string2 = chars.join("_");
+      console.log(string2); // a_b_c_d (언더스코어가 구분자)
+
+      let date = ["2026", "01", "19"];
+      let dateToString = date.join("-");
+      console.log(dateToString); // 2026-01-19
+
+      // 3) filter() <- ★★★ 중요
+      // 조건에 맞는 요소만 골라서(필터링해서) 새로운 배열을 만듦.
+      const integers = [1, 2, 3, 4, 5, 6];
+      const evenNumber = integers.filter((num) => num % 2 == 0); // 짝수만 골라 담기.
+      console.log(evenNumber); // [2,4,6]
+
+      // 4) map() <- ★★★ 중요
+      // 모든 요소(일괄)를 변환해서 새로운 배열을 만듦. 형태를 변환시키는 용도. (ex. 숫자에서 문자로)
+      const prices = [10000, 30000, 50000];
+      const discounts = prices.map((p) => p * 0.8); // 20% 할인
+      console.log(discounts); // [8000, 24000, 40000]
+
+      const users = [
+        { name: "철수", age: 18 },
+        { name: "민수", age: 25 },
+        { name: "영희", age: 22 },
+      ];
+      const adultNames = users.filter((u) => u.age >= 19).map((u) => u.name);
+      console.log(adultNames); // ["민수", "영희"]
+
+      // 5) indexOf()
+      const fruits = ["사과", "바나나", "딸기"];
+      const index = fruits.indexOf("바나나");
+      console.log(index); // 1
+
+      // 6) splice()
+      // 원하는 위치(인덱스)에 요소를 추가, 삭제함.
+      // 인수: 함수 또는 메서드의 ()안에 들어가는 값
+      // 첫번째 인수는 삭제할 인덱스 넘버
+      // 두번째 인수는 삭제할 아이템 개수
+      // 세번째 인수는 추가할 아이템
+      let study = ["html", "css", "javasctipt", "jquery", "resct", "nodejs"];
+      let js = study.splice(2); // 2번 인덱스부터 삭제, 삭제할 두번째 인수가 없으면 끝까지 모두
+      // study 배열에서는 삭제가 발생하고, 새로 만든 js에는 삭제한 데이터가 들어감.
+      console.log(study); // ["html", "css"]
+      console.log(js); // ["javasctipt", "jquery", "resct", "nodejs"]
+
+      let jquery = js.splice(1, 1); // 1번 인덱스부터 1개 삭제
+      console.log(js); // ["jquery", "resct", "nodejs"]
+      console.log(jquery); // ["jquery"]
+
+      let modernJs = js.splice(1, 0, "typescript"); // 1번 인덱스부터 0개 삭제. 지우지 않고 "typescript"가 그 자리에 들어가면서 순서가 밀림.
+      console.log(js); // ["javasctipt", "typescript", "react", "nodejs"]
+      console.log(modernJs); // [] <- 빈 배열
+
+      // 7) slice()
+      // 특정 인덱스 범위의 요소를 카피함. 원본에선 삭제가 발생하지 않음.
+      // 첫번째 인수는 삭제할 인덱스
+      // 두번째 인수는 삭제할 인덱스 범위
+      let colors = ["red", "green", "blue", "white", "black"];
+      let sliced1 = colors.slice(2); // 2번 인덱스부터 끝까지
+      let sliced2 = colors.slice(2, 4); // 2번 인덱스부터 4번 인덱스 전까지(4는 포함되지 않음)
+      console.log(sliced1); // ["blue", "white", "black"]
+      console.log(sliced2); // ["blue", "white"]
+    </script>
+  </body>
+</html>
