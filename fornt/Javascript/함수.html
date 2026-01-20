@@ -6,6 +6,34 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      // ** 함수의 선언부 **
+      // 이 코드 영역((16~20라인)은 즉시 실행되지 않고 반드시 함수의 호출이 발생해야 실행됨.
+      // function이 예약어를 사용하는 함수의 선언부는 코드의 위치와 상관없이 동작됨.
+      // (=페이지의 아래 부분이 있더라도 동일함.)
+      function sum() {
+        // 함수를 만들 땐 function 변수
+        let n = 10; // 블록 스코프 변수 (=지역변수)
+        let result = 0; // 블록 스코프 변수 (=지역변수)
+        for (let i = 1; 1 <= n; i++) {
+          result += i;
+        }
+        console.log(result);
+      }
+
+      let glober = 10; // 글로벌 스코프 (=전역변수)
+      sum(); // 함수를 호출함. 실제로 동작하게 만듦.
+      // console.log(result); // 오류발생. 지역변수이므로 sum() 함수의 종료 시 함께 삭제됨.
+      console.log(glober); // 정상출력. 전역변수
+
+      // 매개변수, 인수, return
+      function addNumber(num1, num2) {
+        // num1과 num2는 매개변수
+        let sum = num1 + num2;
+        return sum; // 리턴
+      }
+      let value = addNumber(2, 3); // 2와 3은 인수
+      console.log(value);
+    </script>
   </body>
 </html>
