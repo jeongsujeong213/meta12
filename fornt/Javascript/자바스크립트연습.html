@@ -231,6 +231,29 @@
 	    // 3. nameDisplay의 textContent에 이름 텍스트를 저장
         nameDisplay.textContent = name;
       }
+
+      // 연습 4
+      function increaseCounter() {
+        // 1. counter 요소를 변수에 저장
+        const counter = document.querySelector("#counter");
+
+        // 2. count라는 변수에 counter 요소의 내용(textContent)을 저장
+        let count = Number(counter.textContent);
+        // 아래의 'count = count + 1' 식을 적용하기 위해선 문자를 숫자로 변환하기 위해 Number를 써야 함. parseInt()도 사용 가능
+        // DOM에서 읽는 모든 value(값)은 문자이기 때문에 숫자로 변환
+
+        // 3. count 변수를 1 증가 시킴
+        count = count + 1 // (count = count + 1 ← 이렇게 작성 시 문자와 숫자이기 때문에 더해지지 않고 그냥 나열되기만 함.)
+        
+        // 4. counter 요소의 textContent에 count 변수의 값을 저장
+        counter.textContent = count;
+      }
+      function resetCounter() {
+        // 1. counter 요소를 변수에 저장
+        const counter = document.querySelector("#counter");
+        // 2. counter 요소의 textContent에 0을 저장
+        counter.textContent = 0;
+      }
     </script>
   </body>
 </html>
