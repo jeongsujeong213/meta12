@@ -221,6 +221,16 @@
         const index = (currentIndex + 1) % greetings.length;
         greeting.textContent = greetings[index];
       }
+      
+      function showName() {
+        // 1. input과 nameDisplay 요소를 변수 저장
+        const nameInput = document.querySelector("#nameInput");
+        const nameDisplay = document.querySelector("#nameDisplay");
+	    // 2. input요소에 입력된 이름 텍스트를 읽어서 변수 저장
+        const name = nameInput.value;
+	    // 3. nameDisplay의 textContent에 이름 텍스트를 저장
+        nameDisplay.textContent = name;
+      }
     </script>
   </body>
 </html>
