@@ -109,13 +109,40 @@
         </div>
       </div>
 
-      <button class="prev-btn">&#10094;</button>
-      <button class="next-btn">&#10095;</button>
+      <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+      <button class="next-btn" onclick="prevSlide()">&#10095;</button>
       <div class="dots-container"></div>
     </div>
     <script>
-      function prevSlide() {}
-      function nextSlide() {}
+      let currentIndex = 0;
+      // querySelectoAll은 slide 클래스 모두를 배열로 저장
+      const slides = document.querySelectorAll(".slide");
+      const sliderWrapper = document.querySelector(".slider-wrapper");
+
+      function prevSlide() {
+        if (currentIndex == 0) {
+          currentIndex = slides.length - 1;
+        } else {
+          currentIndex--;
+        }
+        sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      // ↓ next슬라이드의 특징: 다음(오른쪽(+)) 슬라이드로 이동하는 것. 목적은 보여 줘야 할 슬라이드이 index를 찾는 것.
+      function nextSlide() {
+        if (currentIndex == slides.length - 1) {
+          currentIndex = 0;
+        } else {
+          currentIndex++;
+        }
+        sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      // 버튼 클릭 이벤트 등록
+      const nextBtn = document.querySelector(".next-btn");
+      const prevBtn = document.querySelector(".prev-btn");
+      nextBtn.addEventListener("click", nextSlids); // 함수의 이름만 사용
+      nextBtn.addEventListener("click", prevSlids); // 함수의 이름만 사용
     </script>
   </body>
 </html>
