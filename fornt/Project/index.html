@@ -19,23 +19,31 @@
         padding: 10px;
       }
 
-      .menu-bar {
+      .navbar {
+        display: grid;
+        grid-template-columns: 1fr aut0 1fr;
+        align-items: center;
         background-color: #030303;
-        display: flex;
-        justify-content: center;
-        font-size: 20px;
         color: white;
-        padding: 30px;
-        gap: 20px
+        font-size: 20px;
+        padding: 0px 40px;
+        height: 60px;
       }
 
-      /* .menu {
+      .menu {
+        grid-column: 2;
         display: flex;
-        gap: 20px;
+        gap: 30px;
         color: white;
-        font-size: 13px;
-        font-weight: 500;s
-      } */
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .nav-side {
+        grid-column: 3;
+        display: flex;
+        justify-content: flex-end;
+      }
 
       .sale {
         display: flex;
@@ -49,26 +57,37 @@
       .img {
         background-color: #5C6670;
         font-size: 250px;
+        text-align: center;
       }
 
       .astrograber {
         background-color: #D9D9D9;
-        
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
       }
-      .buttom {
+
+      .button2 {
         background-color: #030303;
         color: white;
         border-radius: 15px;
         font-size: 15px;
+        margin: 20px;
+      }
+
+      .button {
+        background-color: #030303;
+        color: white;
+        border-radius: 15px;
+        font-size: 15px;
+        margin: 10px;
       }
 
       .img2 {
         background-color: #5C6670;
         font-size: 250px;
+        text-align: center;
       }
       
       h2 {
@@ -97,115 +116,161 @@
       .sell-img {
         background-color: #5C6670;
         padding: 55px;
-        margin-bottom: 10px;
+        margin-botton: 10px;
+
       }
 
-      h1 {
-        
-      }
-      
       .sportlight {
         display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .spotlight2 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 40px;
+        column-gap: 20px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .spotlight3 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 40px;
+        column-gap: 20px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
       }
 
       .circle {
-        display: flex;
-
+        background-color: #123458;
+        letter-spacing: -0.5px;
+        padding: 50px 50px;
+        border-radius: 100%;
       }
+
+
+      .h2-1 {
+        text-align: left;
+        padding-left: 450px;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        
+      }
+
+      .h2-2 { 
+        text-align: center; 
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      
+      .circle {
+        display: grid
+      }
+
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <span> 매장 찾기  &nbsp;&nbsp;|</span>&nbsp;&nbsp;
-        <span>  고객센터  &nbsp;&nbsp;|</span>&nbsp;&nbsp;
-        <span>  가입하기  &nbsp;&nbsp;|</span>&nbsp;&nbsp;
-        <span>  로그인 </span>&nbsp;&nbsp;
-      </div>
-      <div class="menu-bar">
-        <span>New</span>
-        <span>Men</span>
-        <span>Women</span>
-        <span>Kids</span>
-        <span>Jordan</span>
-        <span>Sale</span>
-      </div>
-      <div class="menu">
-        <span>
-          <form action="#" method="get">
-            <input type="search" name="q" placeholder="검색">
-          </form>
-        </span>
-      </div>
-      <div class="sale">
-        <p>대학생 할인 프로그램 안내<br>자세히 보기</p>
-      </div>
-      <div class="img">그림1</div>
-      <div class="astrograber"><br><br>
-        <p><h1>나이키 아스트로그래버</h1></p>
-        <p>나답게 사로잡다</p>
-        <br>
-      <buttom class="buttom">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
-      <br>
-      </div>
-      <section class="img2">그림2</section><br>
+   <div class="container">
+    <div class="header">
+      <span> 매장 찾기  &nbsp;&nbsp;|</span>&nbsp;&nbsp;
+      <span>  고객센터  &nbsp;&nbsp;|</span>&nbsp;&nbsp;
+      <span>  가입하기  &nbsp;&nbsp;|</span>&nbsp;&nbsp;
+      <span>  로그인 </span>&nbsp;&nbsp;
+    </div>
 
-      <br><br>
+  <div class="navbar">
+   <div class="nav-side"></div> 
+
+   <div class="menu">
+     <span>New</span>
+     <span>Men</span>
+     <span>Women</span>
+     <span>Kids</span>
+     <a href="#" class="link-jordan">Jordan</a> 
+     <span>Sale</span>
+   </div>
+
+  <div class="nav-side">
+    <input type="text" placeholder="검색">
+  </div>
+  </div>
+
+    </div>
+    <div class="sale">
+      <p>대학생 할인 프로그램 안내<br>자세히 보기</p>
+    </div>
+    <div class="img">그림1</div>
+    <div class="astrograber"><br><br>
+      <p><h1>나이키 아스트로그래버</h1></p>
+      <p>나답게 사로잡다</p>
+      <br>
+    <buttom class="button2">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
+    <br>
+    </div>
+    <section class="img2">그림2</section><br><br><br>
     <div>
-      <h2>Tranding Now</h2>
+      <h2 class="h2-1" >Tranding Now</h2>
       <div class="trending-container">
       <div class="trending">
         <p class="sell-img">트렌드 상품1</p>
-        <button class="buttom">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
+        <button class="button">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
       </div>
       <div class="trending">
         <p class="sell-img">트렌드 상품2</p>
-        <button class="buttom">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
+        <button class="button">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
       </div>
       <div class="trending">
         <p class="sell-img">트렌드 상품3</p>
-        <buttom class="buttom">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
+        <button class="button">&nbsp;&nbsp;구매하기&nbsp;&nbsp;</button>
       </div>
     </div>
 
     <div class="sportlight">
-      <h1>SPORTLIGHT</h1>
-      <div>
-        <p>혁신적인 기술에 클래식한 실루엣을 더한 나이키 아이템으로 걸음이 닿는 곳마다 시선을 사로잡아 보세요.</p>
-      </div>
+      <section class="spotlight-section">     
+        <div class="spotlight-header"></div>
+        <h2 class="h2-2">SPOTLIGHT</h2>
+        <p>혁신적인 기술에 클래식한 실루엣을 더한 나이키 아이템으로 생동감 넘치는 곳마다 시선을 사로잡아 보세요.</p>
+    </div>
+
+    <div class="spotlight2">
+      <div class="spotlight-item">
+       <div class="circle">a</div><span class="item-name">에어맥스</span></div>
+      <div class="spotlight-item">
+       <div class="circle">b</div><span class="item-name">ACC</span></div>
+      <div class="spotlight-item">
+       <div class="circle">d</div><span class="item-name">메트콘</span></div>
+      <div class="spotlight-item">
+       <div class="circle">e</div><span class="item-name">24.7</span></div>
+      <div class="spotlight-item">
+       <div class="circle">f</div><span class="item-name">샥스</span></div>
+    </div>
       
-      <div>
-        <div class="circle">
-          <div class="icon"></div>
-          <div class="list">에어맥스</div>
+    <div class="spotlight3">
+      <div class="spotlight-item">
+       <div class="circle">g</div><span class="item-name">코르테즈</span></div>
+      <div class="spotlight-item">
+       <div class="circle">h</div><span class="item-name">덩크</span></div>
+      <div class="spotlight-item">
+       <div class="circle">i</div><span class="item-name">에어 조던 1</span> </div>     
+      <div class="spotlight-item">
+       <div class="circle">j</div><span class="item-name">데이텀 4</span></div>
+      <div class="spotlight-item">
+       <div class="circle">k</div><span class="item-name">아우터웨어</span></div>
+     </div>
+   </div>
 
-          <div class="icon"></div>
-          <div class="list">ACC</div>
-
-          <div class="icon"></div>
-          <div class="list">메트콘</div>
-
-          <div class="icon"></div>
-          <div class="list">24.7</div>
-
-          <div class="icon"></div>
-          <div class="list">샥스</div>
-
-          <div class="icon"></div>
-          <div class="list">코르테즈</div>
-
-          <div class="icon"></div>
-          <div class="list">덩크</div>
-
-          <div class="icon"></div>
-          <div class="list">에어 조건 1</div>
-
-          <div class="icon"></div>
-          <div class="list">테이텀 4</div>
-
-          <div class="icon"></div>
-          <div class="list">아우터웨어</div>
-      </div>
+</section>
+      
        <div class="title">
         <div>안내</div>
         <div>멤버 혜택</div>
