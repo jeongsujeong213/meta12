@@ -175,17 +175,31 @@
 
       function openModal() {
         overlay.classList.add("active");
+
+        // keydown 이벤트는 대상을 document에 등록함.
+        // 항상 keydown 이벤트를 발생시키는 것이 아닌, 모달창이 열렸을 때만 발생하도록 설정
+        document.addEventListener("keydown", handleEscKey);
       }
 
       function closeModal() {
         overlay.classList.remove("active");
+        // 모달창이 닫혀 있으면 keydown 이벤트 모니터링 안 함.
+        document.removeEventListener("keydown", handleEscKey);
       }
+
       // 모달창 뒤에 오버레이 부분을 클릭했을 때 창 닫기
       function closeModalOnOverlay(event) {
         console.log(event.target);
         console.log(event.currentTarget);
         if (event.target === overlay) {
           overlay.classList.remove("active");
+        }
+      }
+
+      function handleEscKey(event) {
+        console.log(event);
+        if (event.key === "Escape") {
+          closeModal();
         }
       }
     </script>
