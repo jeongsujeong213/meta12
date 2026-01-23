@@ -20,8 +20,7 @@
       }
 
       .navbar {
-        display: grid;
-        grid-template-columns: 1fr aut0 1fr;
+        display: flex;        
         align-items: center;
         background-color: #030303;
         color: white;
@@ -30,17 +29,23 @@
         height: 60px;
       }
 
+      .left {
+        min-width: 100px;
+        flex: 1 1 100px;
+      }
+
       .menu {
-        grid-column: 2;
+        flex: 3;
         display: flex;
+        justify-content: center;
         gap: 30px;
         color: white;
         font-weight: 500;
-        text-align: center;
+        white-space: nowrap;
       }
 
       .nav-side {
-        grid-column: 3;
+        flex: 1 1 100px;
         display: flex;
         justify-content: flex-end;
       }
@@ -189,20 +194,19 @@
     </div>
 
   <div class="navbar">
-   <div class="nav-side"></div> 
-
+   <div class="left"></div>
    <div class="menu">
      <span>New</span>
      <span>Men</span>
      <span>Women</span>
      <span>Kids</span>
-     <a href="#" class="link-jordan">Jordan</a> 
+     <span><a href="#" class="link-jordan">Jordan</a></span>
      <span>Sale</span>
+   
    </div>
-
-  <div class="nav-side">
-    <input type="text" placeholder="검색">
-  </div>
+    <div class="nav-side">
+      <input type="text" placeholder="검색">
+    </div>
   </div>
 
     </div>
