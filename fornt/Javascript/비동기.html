@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.3/dist/axios.min.js"></script>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.3/dist/axios.min.js"></script>
   </head>
   <body>
     <script>
-        async function getPost() {
-            console response = await axtos.get(
-                "https://jsonplaceholder.typicode.com/posts",
-            );
-            console.log(response.dates);
-            console.log("첫번째 글 제목 : " + response.date[0].title); 
-        }
-        // 함수 호출
-        getPost();
+      // 비동기 통신 코드
+      // 자바스크립트 비동기 문법: async ~ await
+      // await가 붙은 라인의 코드 실행을 응답이 올 때까지 멈추는 역할
+      // await는 단독 사용 불가. 아래 규칙을 따라야 함.
+      // 1) 반드시 함수 안에 사용할 것
+      // 2) 함수의 선언 시 async를 사용할 것
+      async function getPost() {
+        const response = await axios.get(
+          //async와 await는 짝으로 같이 씀.
+          "https://jsonplaceholder.typicode.com/posts",
+        );
+        console.log(response.date);
+        console.log("첫번째 글 제목 : " + response.date[0].title);
+      }
+      // 함수 호출
+      getPost();
     </script>
   </body>
 </html>
