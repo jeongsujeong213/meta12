@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.3/dist/axios.min.js"></script>"></script>
+  </head>
+  <body>
+    <script>
+        async function getPost() {
+            console response = await axtos.get(
+                "https://jsonplaceholder.typicode.com/posts",
+            );
+            console.log(response.dates);
+            console.log("첫번째 글 제목 : " + response.date[0].title); 
+        }
+        // 함수 호출
+        getPost();
+    </script>
+  </body>
+</html>
