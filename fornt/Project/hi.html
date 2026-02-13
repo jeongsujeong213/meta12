@@ -63,12 +63,22 @@
           </p>
 
           <p>
-            <button type="submit">가입하기</button>
+            <button type="button" onclick="join()">가입하기</button>
             <button type="button">취소</button>
           </p>
         </fieldset>
       </form>
     </main>
     <p>© 2026 정수정. All rights reserved</p>
+
+    <script>
+      function join() {
+        if (document.form.user_id.value == "") {
+          alert("아이디를 입력하세요.");
+          document.form.user_id.focus();
+          return;
+        }
+      }
+    </script>
   </body>
 </html>
