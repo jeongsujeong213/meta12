@@ -17,7 +17,7 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+nav li {
   display: inline-block;
   margin-right: 15px;
 }
@@ -33,4 +33,20 @@ main {
   margin-top: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #eee;
 }
