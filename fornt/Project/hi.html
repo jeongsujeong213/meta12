@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <!-- <div style="background-color: gold; height: 50px;"> -->
+
+    </div>
+
     <header>
       <h1>안녕하세요, 정수정입니다!</h1>
       <nav>
@@ -17,10 +23,12 @@
       </nav>
     </header>
 
+    <hr>
+
     <main>
       <h2>회원가입 (교육생 등록)</h2>
 
-      <form name="form" method="post" action="test.html">
+      <form name="joinForm" method="post" action="test.html">
         <fieldset>
           <legend>개인 정보</legend>
 
@@ -63,20 +71,36 @@
           </p>
 
           <p>
-            <button type="button" onclick="join()">가입하기</button>
+            <!-- <button type="submit">가입하기(submit: 전송)</button> -->
+            <button type="button" onclick="join()">가입하기(button: 클릭)</button></button>
             <button type="button">취소</button>
           </p>
         </fieldset>
       </form>
     </main>
-    <p>© 2026 정수정. All rights reserved</p>
+    <hr>
+    <footer> 
+      <p>© 2026 정수정. All rights reserved</p>
+    </footer>
 
     <script>
       function join() {
-        if (document.form.user_id.value == "") {
+        let f = document.joinForm;
+
+        if (f.user_id.value == "") {
           alert("아이디를 입력하세요.");
-          document.form.user_id.focus();
+          f.user_id.focus();
           return;
+        }
+
+        if (f.password.value == "") {
+          alert("비밀번호를 입력하세요.");
+          f.password.focus();
+          return;
+        }
+
+        if (confirm('전송하시겠습니까?')) {
+          f.submit();
         }
       }
     </script>
