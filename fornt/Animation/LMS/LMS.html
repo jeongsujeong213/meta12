@@ -3,46 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>강의 사이트</title>
+    <link rel="stylesheet" href="LMS.css" />
   </head>
   <body>
-    <form>
-        <input type="text" placeholder="아이디">
-        <input type="password" placeholder="비밀번호">
-        <button>로그인</button>
-    </form>
-    <button>마이페이지</button>
-    <button>장바구니</button>
-    <button>고객센터</button>
-    <input type="search" placeholder="검색">
-    <h1>헤더<h1>
-    <button>수강신청</button>
-    <button>강사</button>
-    <button>교재/서점</button>
-    </button>합격예측</button>
-    <button>나의 학습관</button>
-    <div>스와이프 이미지: (광고 페이지)</div>
-    <div>무제한 패스</div>
-    <div>패키지1</div>
-    <div>패키지2</div>
-    <div>패키지3</div>
-    <div>패키지4</div>
-    <h2>수험 정보</h2>
-    <button>수험 가이드</button>
-    <button>단기합격</button>
-    <button>공지사항</button>
-    <button>시험공고</button>
-    <p>오시는 길</p>
-    <p>이용약관</p>
-    <p>개인정보처리방침</p>
-    <p>고객센터</p>
-    <p>SNS 채널</p>
-    <p>원격지원</p>
-    <p>카카오톡</p>
-    <p>상담 TEL:
-        고객센터 1588-****</p>
-    <p>평일 09시~20시</p>
-    <p>점심시간 12시~13시</p>
-    <p>토, 일, 공휴일 휴무</p>
+    <!-- 상단 메뉴 -->
+    <div class="top-menu">
+      <a href="login.html">로그인</a>
+      <a href="mypage.html">마이페이지</a>
+      <a href="cart.html">장바구니</a>
+      <a href="support.html">고객센터</a>
+      <input type="search" placeholder="검색" />
+    </div>
+
+    <!-- 배너 헤더 -->
+    <header class="site-header">
+      <img
+        src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+        alt="메인 배너"
+        class="header-banner"
+      />
+    </header>
+
+    <!-- 네비게이션 -->
+    <nav class="nav">
+      <a href="apply.html">수강신청</a>
+      <a href="instructor.html">강사</a>
+      <a href="books.html">교재/서점</a>
+      <a href="prediction.html">합격예측</a>
+      <a href="myclass.html">나의 학습관</a>
+    </nav>
+
+    <!-- 스와이프 -->
+    <!-- <div class="swipes">
+      <div class="swipe">
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="이미지 1"
+        />
+      </div>
+      <div class="swipe">
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="이미지 2"
+        />
+      </div>
+      <div class="swipe">
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="이미지 3"
+        />
+      </div>
+    </div> -->
+
+    <!-- 카드 -->
+    <h2>무제한 패스</h2>
+    <article class="card">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="계리직 전공"
+        />
+        <div class="label1">패키지</div>
+        <h3>계리직 전공</h3>
+        <p>20%</p>
+        <p>240,000원</p>
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="행정직 전공"
+        />
+        <div class="label2">패키지</div>
+        <h3>행정직 전공</h3>
+        <p>20%</p>
+        <p>300,000원</p>
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="전산직 전공"
+        />
+        <div class="label3">패키지</div>
+        <h3>전산직 전공</h3>
+        <p>20%</p>
+        <p>555,000원</p>
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="토목직 전공"
+        />
+        <div class="label4">패키지</div>
+        <h3>토목직 전공</h3>
+        <p>20%</p>
+        <p>305,000원</p>
+      </div>
+    </article>
+
+    <!-- 버튼 -->
+    <h2>수험생을 위한 정보</h2>
+    <div class="exam_guide_button">
+      <a href="exam_guide.html">
+        수험 가이드
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="아이콘1"
+        />
+      </a>
+    </div>
+    <div class="pass_button">
+      <a href="pass.html">
+        단기합격
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="아이콘2"
+        />
+      </a>
+    </div>
+    <div class="notice_button">
+      <a href="notice.html">
+        공지사항
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="아이콘3"
+        />
+      </a>
+    </div>
+    <div class="test_guide_button">
+      <a href="test_guide.html">
+        시험공고
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+          alt="아이콘4"
+        />
+      </a>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <p>오시는 길</p>
+      <p>이용약관</p>
+      <p>개인정보처리방침</p>
+      <p>고객센터</p>
+      <p>SNS 채널</p>
+      <p>원격지원</p>
+      <p>카카오톡</p>
+      <p>상담 TEL: 고객센터 1588-****</p>
+      <p>평일 09시~20시</p>
+      <p>점심시간 12시~13시</p>
+      <p>토, 일, 공휴일 휴무</p>
+    </footer>
   </body>
 </html>
